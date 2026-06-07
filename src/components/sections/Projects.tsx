@@ -6,8 +6,8 @@ export function Projects() {
   return (
     <SectionWrapper id="projects">
       <header className="flex flex-col gap-3">
-        <span className="font-mono text-caption text-accent">// PROJECTS</span>
-        <h1 className="text-h1 text-text-primary">프로젝트</h1>
+        <span className="font-mono text-caption text-accent">{'// PROJECTS'}</span>
+        <h2 className="text-h1 text-text-primary">프로젝트</h2>
         <p className="text-body-lg text-text-secondary">
           직접 만든 것들을 소개합니다.
         </p>
