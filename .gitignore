@@ -1,0 +1,8 @@
+.state/
+node_modules/
+.next/
+dist/
+out/
+.env
+.env.local
+.env*.local
