@@ -10,7 +10,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <article
-      role="article"
       aria-labelledby={headingId}
       className="relative group bg-surface-card border border-border rounded-lg shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-250 p-6 flex flex-col gap-4"
     >

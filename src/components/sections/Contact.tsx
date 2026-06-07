@@ -15,7 +15,7 @@ export function Contact() {
   return (
     <SectionWrapper id="contact" subtle>
       <div className="flex flex-col items-center text-center">
-        <p className="font-mono text-caption text-accent">// CONTACT</p>
+        <p className="font-mono text-caption text-accent">{'// CONTACT'}</p>
         <h2 className="mt-4 text-h1 text-text-primary">연락하기</h2>
         <p className="mt-4 text-body-lg text-text-secondary">
           함께 일할 기회를 기다립니다.

@@ -59,7 +59,7 @@ export function Skills() {
   return (
     <SectionWrapper id="skills" subtle>
       <div className="flex flex-col gap-3">
-        <p className="font-mono text-caption text-accent">// SKILLS</p>
+        <p className="font-mono text-caption text-accent">{'// SKILLS'}</p>
         <h2 className="text-h1 text-text-primary">기술 스택</h2>
       </div>
       <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-3">

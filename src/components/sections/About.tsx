@@ -25,7 +25,7 @@ export function About() {
   return (
     <SectionWrapper id="about">
       <div className="flex flex-col gap-3">
-        <p className="font-mono text-caption text-accent">// ABOUT</p>
+        <p className="font-mono text-caption text-accent">{'// ABOUT'}</p>
         <h2 className="text-h1 text-text-primary">About Me</h2>
       </div>
 
