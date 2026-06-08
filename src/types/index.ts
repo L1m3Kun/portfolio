@@ -1,4 +1,8 @@
-export type ProjectSlug = 'vacation-form' | 'openmind-knock' | 'checkchaek';
+export type ProjectSlug =
+  | 'portfolio-fe'
+  | 'vacation-form'
+  | 'openmind-knock'
+  | 'checkchaek';
 
 export type TechCategory =
   | 'language'
