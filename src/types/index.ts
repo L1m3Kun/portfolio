@@ -22,6 +22,11 @@ export interface ProjectImpact {
   value: string;
 }
 
+export interface Troubleshooting {
+  title: string;
+  content: string;
+}
+
 export interface Project {
   slug: ProjectSlug;
   title: string;
@@ -35,6 +40,8 @@ export interface Project {
   problem: string;
   solution: string;
   featured: boolean;
+  troubleshooting?: Troubleshooting[];
+  retrospective?: string[];
 }
 
 export type SkillCategory =
