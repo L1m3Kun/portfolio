@@ -18,8 +18,8 @@ export const projects: Project[] = [
       { name: 'Vercel', category: 'deploy' },
     ],
     links: {
-      live: 'https://l1m3kun.github.io/porfolio-fe',
-      github: 'https://github.com/L1m3Kun/porfolio-fe',
+      live: 'https://l1m3kun.github.io/portfolio',
+      github: 'https://github.com/L1m3Kun/portfolio',
     },
     impacts: [
       { metric: 'AI 에이전트 협업 팀', value: '8개 역할 분담' },
