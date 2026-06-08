@@ -2,6 +2,54 @@ import type { Project } from '@/types';
 
 export const projects: Project[] = [
   {
+    slug: 'portfolio-fe',
+    title: '개발자 포트폴리오',
+    description:
+      'Claude Code 멀티 에이전트 하네스로 제작한 포트폴리오 사이트. CEO·PM·UX·Designer·FE·TechLead·QA·Tester 서브에이전트 팀이 실제 개발사처럼 협업하여 기획→설계→구현→리뷰→QA 전 과정을 자동화했습니다.',
+    role: '기획 · 설계 · 품질 관리 (AI 에이전트 팀 오케스트레이션)',
+    period: '2026.06 (약 1주)',
+    teamSize: 'AI 에이전트 8인 팀',
+    stack: [
+      { name: 'Next.js 14', category: 'framework' },
+      { name: 'TypeScript', category: 'language' },
+      { name: 'Tailwind CSS', category: 'styling' },
+      { name: 'Framer Motion', category: 'tooling' },
+      { name: 'Claude Code', category: 'tooling' },
+      { name: 'Vercel', category: 'deploy' },
+    ],
+    links: {
+      live: 'https://l1m3kun.github.io/porfolio-fe',
+      github: 'https://github.com/L1m3Kun/porfolio-fe',
+    },
+    impacts: [
+      { metric: 'AI 에이전트 협업 팀', value: '8개 역할 분담' },
+      { metric: '자동화된 PR', value: '13건 리뷰·머지' },
+      { metric: '기획→배포 리드타임', value: '7일' },
+    ],
+    problem:
+      '개인 포트폴리오를 직접 처음부터 구현하려니, 1인 개발자가 기획·UX·디자인·프론트엔드 구현·코드 리뷰·QA를 혼자 모두 떠안아야 했습니다. 역할을 번갈아 전환하다 보면 디자인 일관성과 코드 품질을 동시에 챙기기 어렵고, 스스로의 코드를 객관적으로 리뷰하기도 힘들어 결과물의 완성도가 들쑥날쑥해지는 구조적 한계가 있었습니다.',
+    solution:
+      'Claude Code의 멀티 에이전트 하네스를 활용해 CEO·PM·UX·Designer·FE·TechLead·QA·Tester 각 역할을 전담 서브에이전트에게 분배했습니다. CEO가 작업을 DAG로 분해해 할당하고, UX/Designer가 스펙 문서로 계약을 고정한 뒤 FE가 구현하면 TechLead가 SOLID·접근성 기준으로 리뷰하고 QA·Tester가 검증하는 흐름을 Phase 기반 체크포인트로 관리해, 1인 개발에서 빠지기 쉬운 품질 게이트를 구조적으로 강제했습니다.',
+    troubleshooting: [
+      {
+        title: 'next-themes 버전 미존재로 설치 실패',
+        content:
+          'package.json에 next-themes를 ^0.3.3으로 지정했으나 레지스트리에 존재하지 않는 버전이라 의존성 설치 단계에서 실패했습니다. npm에 실제 배포된 버전을 확인해 ^0.4.6으로 정정하고 lockfile을 재생성해, 테마 전환 의존성이 정상적으로 설치되도록 해결했습니다. AI가 생성한 버전 명세도 실제 레지스트리와 대조 검증이 필요하다는 점을 확인한 사례였습니다.',
+      },
+      {
+        title: 'ThemeToggle가 system 테마를 감지하지 못함',
+        content:
+          'ThemeToggle에서 현재 테마를 theme === "dark"로 판별했더니, 사용자가 테마를 "system"으로 둔 경우 OS가 다크 모드여도 toggle 상태가 라이트로 표시되는 버그가 있었습니다. next-themes의 theme는 사용자가 선택한 설정값(light/dark/system)일 뿐 실제 적용된 테마가 아니므로, 시스템 설정까지 반영된 resolvedTheme를 기준으로 판별하도록 수정해 OS 다크 모드가 정확히 감지되도록 고쳤습니다.',
+      },
+    ],
+    retrospective: [
+      'AI 에이전트에게 역할과 입출력 계약(스펙 문서)을 명확히 줄수록 결과물 품질이 일관되게 높아졌습니다. 모호한 지시는 곧 모호한 산출물로 이어져, 프롬프트 자체가 설계의 일부라는 점을 체감했습니다.',
+      'TechLead 리뷰가 자동화되어도 사람이 최종적으로 확인하는 구조가 중요했습니다. next-themes 버전 오류처럼 AI가 자신 있게 만들어낸 결과에도 실제 환경 검증이 필요한 빈틈이 존재했습니다.',
+      'Phase 기반 체크포인트로 작업을 분할하니 한 단계의 실수가 다음 단계로 번지기 전에 끊을 수 있었고, 1인 개발에서 놓치기 쉬운 품질 게이트를 협업 구조로 강제할 수 있다는 가능성을 확인했습니다.',
+    ],
+    featured: true,
+  },
+  {
     slug: 'vacation-form',
     title: '휴가 신청서',
     description:
