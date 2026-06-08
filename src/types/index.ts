@@ -1,4 +1,4 @@
-export type ProjectSlug = 'portfolio-web' |'vacation-form' | 'openmind-knock' | 'checkchaek';
+export type ProjectSlug = 'vacation-form' | 'openmind-knock' | 'checkchaek';
 
 export type TechCategory =
   | 'language'
@@ -22,11 +22,6 @@ export interface ProjectImpact {
   value: string;
 }
 
-export interface Troubleshooting {
-  title: string;
-  content: string;
-}
-
 export interface Project {
   slug: ProjectSlug;
   title: string;
@@ -39,8 +34,6 @@ export interface Project {
   impacts: ProjectImpact[];
   problem: string;
   solution: string;
-  troubleshooting?: Troubleshooting[];
-  retrospective?: string[];
   featured: boolean;
 }
 

@@ -1,5 +1,4 @@
-import { ExternalLink, Github, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { ExternalLink, Github } from 'lucide-react';
 import type { Project } from '@/types';
 
 interface ProjectCardProps {
@@ -84,14 +83,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <Github className="h-4 w-4" aria-hidden="true" />
           GitHub
         </a>
-        <Link
-          href={`/projects/${project.slug}`}
-          aria-label={`${project.title} 상세 보기`}
-          className="ml-auto inline-flex items-center gap-1 text-caption font-medium text-accent hover:text-accent-hover transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-focus"
-        >
-          자세히 보기
-          <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-        </Link>
       </div>
     </article>
   );
