@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Background / Surface */
+    --bg-base: 210 20% 98%;
+    --bg-subtle: 210 20% 96%;
+    --surface-card: 0 0% 100%;
+    --surface-nav: 0 0% 100%;
+    --surface-overlay: 210 20% 98%;
+
+    /* Text */
+    --text-primary: 222 47% 11%;
+    --text-secondary: 215 19% 35%;
+    --text-muted: 215 16% 47%;
+    --text-on-accent: 0 0% 100%;
+
+    /* Accent (teal / blue-green) */
+    --accent: 190 95% 39%;
+    --accent-hover: 192 91% 32%;
+    --accent-active: 193 82% 28%;
+    --accent-subtle: 187 92% 91%;
+    --accent-fg: 192 91% 26%;
+
+    /* Border / Divider */
+    --border: 214 20% 88%;
+    --border-strong: 214 16% 78%;
+
+    /* Feedback */
+    --success: 160 84% 30%;
+    --success-subtle: 152 76% 93%;
+    --error: 0 72% 46%;
+    --error-subtle: 0 86% 95%;
+
+    /* Focus ring */
+    --focus: 190 95% 39%;
+  }
+
+  .dark {
+    /* Background / Surface */
+    --bg-base: 222 47% 7%;
+    --bg-subtle: 222 40% 10%;
+    --surface-card: 220 33% 12%;
+    --surface-nav: 222 40% 9%;
+    --surface-overlay: 222 45% 8%;
+
+    /* Text */
+    --text-primary: 210 30% 96%;
+    --text-secondary: 214 18% 74%;
+    --text-muted: 215 16% 60%;
+    --text-on-accent: 222 47% 7%;
+
+    /* Accent (raised brightness for contrast on dark) */
+    --accent: 187 92% 55%;
+    --accent-hover: 188 86% 64%;
+    --accent-active: 187 80% 70%;
+    --accent-subtle: 191 50% 18%;
+    --accent-fg: 187 92% 65%;
+
+    /* Border / Divider */
+    --border: 218 24% 20%;
+    --border-strong: 216 20% 30%;
+
+    /* Feedback */
+    --success: 152 70% 55%;
+    --success-subtle: 153 40% 16%;
+    --error: 0 84% 67%;
+    --error-subtle: 0 40% 18%;
+
+    /* Focus ring */
+    --focus: 187 92% 55%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+  }
+
+  body {
+    @apply bg-bg-base text-text-primary font-sans antialiased;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+    transition: background-color 300ms cubic-bezier(0.45, 0, 0.55, 1),
+      color 300ms cubic-bezier(0.45, 0, 0.55, 1);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-focus ring-offset-2 ring-offset-bg-base;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
