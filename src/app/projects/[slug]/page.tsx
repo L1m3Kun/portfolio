@@ -167,6 +167,7 @@ function TroubleshootingSection({
           return (
             <li
               key={item.title}
+              aria-labelledby={itemId}
               className="rounded-lg border border-border bg-surface-card p-5 shadow-card"
             >
               <h3
@@ -194,9 +195,9 @@ function RetrospectiveSection({ items }: { items: string[] }) {
         회고 / 배운 점
       </h2>
       <ul className="flex flex-col gap-3">
-        {items.map((item) => (
+        {items.map((item, i) => (
           <li
-            key={item}
+            key={i}
             className="flex gap-3 text-body text-text-secondary"
           >
             <span aria-hidden="true" className="mt-1 text-accent">
