@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: '강성구 | Frontend Developer',
     description: 'React/Next.js 기반 프론트엔드 개발자 강성구의 포트폴리오',
-    url: 'https://l1m3kun.github.io/porfolio-fe',
+    url: 'https://l1m3kun.github.io/porfolio',
     siteName: '강성구 포트폴리오',
     locale: 'ko_KR',
     type: 'website',
